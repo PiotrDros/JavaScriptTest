@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p>
+<button onclick="myMove()">Click Me</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+<p id="tester">Gad</p>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("animate"); 
+var tester =  document.getElementById("tester");  
+  var pos = 0;
+  var descending = true;
+  var id = setInterval(frame, 5);
+  function frame() {
+      if (pos == 0) {
+        descending = true;
+      }  else if (pos == 350) {
+         descending = false;
+      }   
+
+     if(descending ) {
+       pos++; 
+     } else {
+       pos--;
+     }
+
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+
+tester.innerHTML = pos; 
+
+    
+  }
+}
+</script>
+
+</body>
+</html>
