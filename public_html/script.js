@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+var x = [2];
+
+function f(x,y) {
+    document.write(x + y);
+}
+f(3,7);
+f("a", 2);
+f("a", "b");
+=======
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,3 +21,4 @@ for (i in x) {
     document.write(x instanceof Array);
 }
 
+>>>>>>> 6efdc9c99cb6fdfec649da11462b09caf65c37e1
